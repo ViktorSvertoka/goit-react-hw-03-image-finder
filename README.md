@@ -134,3 +134,9 @@ Pixabay API підтримує пагінацію, за замовчування
 npm install @emotion/react @emotion/styled
 
 import styled from '@emotion/styled'
+
+---
+
+npm i nanoid
+
+import { nanoid } from 'nanoid'
