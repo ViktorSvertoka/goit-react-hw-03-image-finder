@@ -140,3 +140,9 @@ import styled from '@emotion/styled'
 npm i nanoid
 
 import { nanoid } from 'nanoid'
+
+---
+
+npm i modern-normalize
+
+import 'modern-normalize'
