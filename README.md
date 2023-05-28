@@ -131,6 +131,12 @@ Pixabay API підтримує пагінацію, за замовчування
 
 ---
 
+npm i axios
+
+import axios from 'axios'
+
+---
+
 npm install @emotion/react @emotion/styled
 
 import styled from '@emotion/styled'
