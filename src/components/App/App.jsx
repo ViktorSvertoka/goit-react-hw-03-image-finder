@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import * as API from '../../services/PixabayApi';
-import ImageGallery from '../ImageGallery/ImageGallery';
 import SearchBar from '../SearchBar/SearchBar';
+import ImageGallery from '../ImageGallery/ImageGallery';
 import Loader from '../Loader/Loader';
 import Button from '../Button/Button';
 
