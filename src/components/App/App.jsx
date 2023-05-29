@@ -73,8 +73,14 @@ class App extends Component {
         {images.length > 0 ? (
           <ImageGallery images={images} />
         ) : (
-          <p style={{ padding: 10, textAlign: 'center', fontSize: 20 }}>
-            Image gallery is empty
+          <p
+            style={{
+              padding: 100,
+              textAlign: 'center',
+              fontSize: 30,
+            }}
+          >
+            Image gallery is empty... 📷
           </p>
         )}
         {isLoading && <Loader />}
