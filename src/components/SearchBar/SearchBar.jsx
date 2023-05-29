@@ -10,13 +10,13 @@ import {
 
 class SearchBar extends Component {
   state = {
-    searchName: '',
+    searchName: '', // Хранит значение введенного поискового запроса
   };
 
   handleSubmit = event => {
-    event.preventDefault();
-    this.props.onSubmit(event.target.elements.searchName.value);
-    event.target.reset();
+    event.preventDefault(); // Предотвращаем стандартное поведение формы
+    this.props.onSubmit(event.target.elements.searchName.value); // Передаем введенный поисковый запрос родительскому компоненту
+    event.target.reset(); // Сбрасываем значение в поле ввода после отправки формы
   };
 
   render() {
@@ -25,7 +25,7 @@ class SearchBar extends Component {
         <SearchForm onSubmit={this.handleSubmit}>
           <a href="https://pixabay.com/" target="_blank" rel="noreferrer">
             <SearchLogo
-              src={require('./pixabay-logo.png')}
+              src={require('./pixabay-logo.png')} // Логотип Pixabay
               alt="logo"
               width="200"
             />
