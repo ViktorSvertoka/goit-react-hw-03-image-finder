@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import * as API from '../../services/PixabayApi';
-// import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Loader from '../Loader/Loader';
 import Button from '../Button/Button';
@@ -68,8 +68,8 @@ class App extends Component {
     const { images, isLoading, currentPage, totalPages } = this.state;
 
     return (
-      <div className="App">
-        {/* <SearchBar onSubmit={this.handleSubmit} /> */}
+      <div>
+        <SearchBar onSubmit={this.handleSubmit} />
         {images.length > 0 ? (
           <ImageGallery images={images} />
         ) : (
