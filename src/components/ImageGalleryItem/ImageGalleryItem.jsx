@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import Modal from '../Modal/Modal';
+import { Item, Img } from './ImageGalleryItem.styled';
 
 class ImageItem extends Component {
   state = {
@@ -19,8 +19,8 @@ class ImageItem extends Component {
 
     return (
       <>
-        <li>
-          <img
+        <Item>
+          <Img
             src={image.webformatURL}
             alt={image.tags}
             onClick={this.toggleModal}
@@ -32,7 +32,7 @@ class ImageItem extends Component {
               onClose={this.toggleModal}
             />
           )}
-        </li>
+        </Item>
       </>
     );
   }
