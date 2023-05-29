@@ -155,4 +155,16 @@ import 'modern-normalize'
 
 ---
 
-key: '34523545-f21683fd59bfc3e4e2549fe07'
+npm install react-loader-spinner --save
+
+import { Audio } from 'react-loader-spinner'
+
+---
+
+npm i react-icons
+
+import { BsSearch } from 'react-icons/bs';
+
+---
+
+API key: '34523545-f21683fd59bfc3e4e2549fe07'
