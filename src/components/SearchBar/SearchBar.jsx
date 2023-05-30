@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { BsSearch } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 import {
   SearchForm,
   SearchInput,
@@ -11,11 +12,17 @@ import {
 class SearchBar extends Component {
   state = {
     searchName: '', // Хранит значение введенного поискового запроса
+    inputValue: '',
+  };
+
+  handleChange = event => {
+    this.setState({ inputValue: event.target.value });
   };
 
   handleSubmit = event => {
     event.preventDefault(); // Предотвращаем стандартное поведение формы
-    this.props.onSubmit(event.target.elements.searchName.value); // Передаем введенный поисковый запрос родительскому компоненту
+    const searchQuery = event.target.elements.searchName.value.trim(); // Получаем введенный поисковый запрос и удаляем пробелы
+    this.props.onSubmit(searchQuery); // Передаем введенный поисковый запрос родительскому компоненту
     event.target.reset(); // Сбрасываем значение в поле ввода после отправки формы
   };
 
@@ -34,11 +41,21 @@ class SearchBar extends Component {
             <BsSearch />
             <SearchSpan>Search</SearchSpan>
           </SearchButton>
-          <SearchInput name="searchName" type="text" id="search" />
+          <SearchInput
+            name="searchName"
+            type="text"
+            id="search"
+            value={this.inputValue}
+            onChange={this.handleChange}
+          />
         </SearchForm>
       </header>
     );
   }
 }
+
+SearchBar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default SearchBar;
