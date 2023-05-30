@@ -11,11 +11,13 @@ class Modal extends Component {
   // Метод жизненного цикла: вызывается после монтирования компонента
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown); // Добавляем обработчик события нажатия клавиши
+    document.body.style.overflow = 'hidden';
   }
 
   // Метод жизненного цикла: вызывается перед размонтированием компонента
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyDown); // Удаляем обработчик события нажатия клавиши
+    document.body.style.overflow = 'visible';
   }
 
   // Обработчик события нажатия клавиши
