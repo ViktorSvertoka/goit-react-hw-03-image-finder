@@ -1,8 +1,9 @@
 import { ColorRing } from 'react-loader-spinner';
+import { LodeWrapper } from './Loader.styled';
 
 const Loader = () => {
   return (
-    <>
+    <LodeWrapper>
       <ColorRing
         visible={true}
         height="80"
@@ -10,9 +11,9 @@ const Loader = () => {
         ariaLabel="blocks-loading"
         wrapperStyle={{}}
         wrapperClass="blocks-wrapper"
-        colors={['#b8c480', '#B2A3B5', '#F4442E', '#51E5FF', '#429EA6']}
+        colors={['#f8d703', '#cc06f4', '#f8d703', '#06d0f3', '#f8d703']}
       />
-    </>
+    </LodeWrapper>
   );
 };
 
