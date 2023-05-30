@@ -17,6 +17,7 @@ export const SearchForm = styled.form`
     rgba(255, 25, 25, 0.7) 98%
   );
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  z-index: 999;
 `;
 
 export const SearchInput = styled.input`
