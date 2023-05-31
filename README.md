@@ -167,4 +167,10 @@ import { BsSearch } from 'react-icons/bs';
 
 ---
 
+npm i react-toastify
+
+import { ToastContainer, toast } from 'react-toastify';
+
+---
+
 API key: '34523545-f21683fd59bfc3e4e2549fe07'

@@ -4,6 +4,8 @@ import SearchBar from '../SearchBar/SearchBar';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Loader from '../Loader/Loader';
 import Button from '../Button/Button';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class App extends Component {
   // Установка начального состояния
@@ -53,8 +55,10 @@ class App extends Component {
       const data = await API.getImages(searchName, currentPage);
 
       if (data.hits.length === 0) {
-        alert('Sorry image not found...'); // Если изображения не найдены, выводим сообщение
-        return;
+        // Если изображения не найдены, выводим сообщение
+        return toast.info('Sorry image not found...', {
+          position: toast.POSITION.TOP_RIGHT,
+        });
       }
 
       // Нормализуем полученные изображения
@@ -78,6 +82,7 @@ class App extends Component {
 
     return (
       <div>
+        <ToastContainer transition={Slide} />
         <SearchBar onSubmit={this.handleSubmit} />
         {images.length > 0 ? (
           <ImageGallery images={images} />
