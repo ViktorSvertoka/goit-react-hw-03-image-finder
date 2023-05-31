@@ -45,7 +45,7 @@ class SearchBar extends Component {
             name="searchName"
             type="text"
             id="search"
-            value={this.inputValue}
+            value={this.state.inputValue}
             onChange={this.handleChange}
           />
         </SearchForm>
